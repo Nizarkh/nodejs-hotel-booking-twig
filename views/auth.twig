@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <title> Authentication </title>
+</head>
+
+<body>
+    <table>
+        <div>
+            <form action="/auth" method="post">
+                <tr>
+                    <td>
+                        <h1>Hotel booking</h1>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>email :</td>
+                    <td><input type="text" name="email" id="email" value="{{data.email}}" /></td>
+                </tr>
+                <tr>
+                    <td>Password :</td>
+                    <td><input type="text" name="pw" id="pw" value="{{data.pw}}" /></td>
+                </tr>
+
+                <tr>
+                    <td> </td>
+                    <td colspan="2"><input type="submit" value="sign in" /><a href=signup>Register now ?</a></td>
+                </tr>
+
+
+
+
+
+
+            </form>
+        </div>
+
+    </table>
+</body>
+
+</html>

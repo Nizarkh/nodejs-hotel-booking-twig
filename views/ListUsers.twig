@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <tr>
+        <h1>List Users</h1>
+    </tr>
+    <tr> <a href=../home>Home </a></tr>
+
+
+</head>
+
+<body>
+    <form role="form" action="users/search" method="post">
+        <tr><td>search :</td><td><input type="text" name="search" id="search" value="{{data.search}}"/></td></tr> 
+        <input type='submit' value='search' id='search'>    
+     </form> 
+    <table>
+
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{item.name}}</td>
+            <td>{{item.email}}</td>
+            <td>
+                <a href="/users/update/{{item._id}}">Update</a>
+                <a href="/users/delete/{{item._id}}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td><a href="../users/adduser/">Add user</a></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

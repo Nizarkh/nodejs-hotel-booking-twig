@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Ajouter un Hotel</title>
+</head>
+<body>
+<table>
+<form action="/hotel/addHotel" method="post">
+<tr><td>Hotel_Name :</td><td><input type="text" name="hotelName" id="hotelName" /></td></tr>
+<tr><td>capacite :</td><td><input type="number" name="capacite" id="capacite" /></td></tr>
+<tr><td>etoile :</td><td><input type="number" name="etoile" id="etoile" /></td></tr>
+<!-- 
+<tr><td>Location :</td><td><input type="text" name="location" id="location" /></td></tr>
+-->
+<tr><td>Location :</td><td>
+<select name="Location" id="Location">
+    <option value="">--Please choose an option--</option>
+    <option value="Sousse">Sousse</option>
+    <option value="Hammamet">Hammamet</option>
+    <option value="Djerba">Djerba</option>
+    <option value="Tabarka">Tabarka</option>
+    <option value="Bizerte">Bizerte</option>
+    <option value="Gammart">Gammart</option>
+    <option value="Tunis">Tunis</option>
+</select></td></tr>
+<tr><td colspan="2"><input type="submit" value="Ajouter" /></td>
+</form>
+</table>
+</body>
+</html>

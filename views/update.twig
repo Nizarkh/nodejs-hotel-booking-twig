@@ -1,0 +1,18 @@
+<html>
+<head>
+<title>Modifier un Hotel</title>
+</head>
+<body>
+<table>
+<form action="/hotel/updates" method="post">
+<tr><td>Hotel_Name :</td><td><input type="text" name="hotelName" id="hotelName" value="{{data.HotelName}}"/></td></tr>
+<tr><td>Capacite :</td><td><input type="number" name="capacite" id="capacite" value="{{data.Capacite}}"/></td></tr>
+<tr><td>Etoile :</td><td><input type="number" name="etoile" id="etoile" value="{{data.Etoile}}" /></td></tr>
+<tr><td>Location :</td><td><input type="text" name="location" id="location" value="{{data.Location}}" /></td></tr>
+<tr><td></td><td><input type="hidden" name="id" id="id"  value="{{data._id}}"/></td></tr>
+
+<tr><td colspan="2"><input type="submit" value="Modifier" /></td>
+</form>
+</table>
+</body>
+</html>

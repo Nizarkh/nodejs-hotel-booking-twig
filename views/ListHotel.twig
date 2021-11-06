@@ -1,0 +1,47 @@
+<html>
+
+<head>
+    <tr>
+        <h1>Liste Hotels</h1>
+    </tr>
+    <tr> <a href=../home>Home </a></tr>
+
+
+</head>
+
+<body>
+    <form role="form" action="hotel/search" method="post">
+        <tr><td>search :</td><td><input type="text" name="search" id="search" value="{{data.search}}"/></td></tr> 
+        <input type='submit' value='search' id='search'>    
+     </form> 
+    <table>
+
+        <tr>
+            <td>HotelName</td>
+            <td>Location</td>
+            <td>Capacite</td>
+            <td>Etoile</td>
+
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{item.HotelName}}</td>
+            <td>{{item.Location}}</td>
+            <td>{{item.Capacite}}</td>
+            <td>{{item.Etoile}}</td>
+            <td>
+                <a href="/hotel/modifier/{{item._id}}">Modifier</a>
+                <a href="/hotel/delete/{{item._id}}">Supprimer</a>
+            </td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td><a href="../hotel/add/">Add another hotel</a></td>
+        </tr>
+    </table>
+
+   
+
+</body>
+
+</html>

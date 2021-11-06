@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <tr>
+        <h1>Liste room</h1>
+    </tr>
+    <tr> <a href=../home>Home </a></tr>
+
+
+</head>
+
+<body>
+
+    <table>
+
+        <tr>
+            <td>hotel</td>
+            <td>number</td>
+            <td>type</td>
+            <td>price</td>
+             <td>maxGuests</td>
+            <td>dateCreated</td>
+        </tr>
+        {% for item in data %}
+        <tr>
+            <td>{{item.hotel}}</td>
+            <td>{{item.number}}</td>
+            <td>{{item.type}}</td>
+            <td>{{item.price}}</td>
+             <td>{{item.maxGuests}}</td>
+            <td>{{item.dateCreated}}</td>
+            <td>
+                <a href="/room/modifier/{{item._id}}">Modifier</a>
+                <a href="/room/delete/{{item._id}}">Supprimer</a>
+            </td>
+        </tr>
+        {% endfor %}
+        <tr>
+            <td><a href="../room/add/">Add another room</a></td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

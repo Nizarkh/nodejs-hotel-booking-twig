@@ -1,0 +1,35 @@
+<html>
+
+<head>
+    <tr>
+        <h1>List Users</h1>
+    </tr>
+    <tr> <a href=../home>Home </a></tr>
+
+
+</head>
+
+<body>
+
+    <table>
+
+        <tr>
+            <td>Name</td>
+            <td>Email</td>
+        </tr>
+       
+        <tr>
+            <td>{{User.name}}</td>
+            <td>{{User.email}}</td>
+            <td>
+                <a href="/users/update/{{User._id}}">Update</a>
+                <a href="/users/delete/{{User._id}}">Delete</a>
+            </td>
+        </tr>
+       
+    
+    </table>
+
+</body>
+
+</html>

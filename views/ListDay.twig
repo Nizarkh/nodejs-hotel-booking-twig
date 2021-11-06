@@ -1,0 +1,27 @@
+<html>
+<head>
+<h1>Liste Days</h1>
+</head>
+
+<body>
+
+<table>
+
+<tr>
+<td>Day</td>
+<td>Min</td>
+<td>sec</td>
+</tr>
+{% for item in data %}
+<tr>
+<td>{{item.day}}</td>
+<td>{{item.min}}</td>
+<td>{{item.sec}}</td>
+
+</tr>
+{% endfor %}
+</table>
+
+</body>
+
+</html>

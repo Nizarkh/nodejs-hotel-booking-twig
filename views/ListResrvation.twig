@@ -1,0 +1,65 @@
+<html>
+
+<head>
+
+</head>
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  th,
+  td {
+    padding: 15px;
+  }
+</style>
+
+<body>
+  <form role="form" action="reservation/search" method="post">
+    <tr>
+      <td>search :</td>
+      <td><input type="text" name="search" id="search" value="{{data.search}}" /></td>
+    </tr>
+    <input type='submit' value='search' id='search'>
+  </form>
+
+
+  <table style="width:100%">
+    <tr>
+      <th colspan="6">Liste de resrvation</th>
+
+    </tr>
+
+    <tr>
+      <td>fullName</td>
+      <td>nombre d'adulte</td>
+      <td>nombre d'enfants</td>
+      <td>date_debut</td>
+      <td>date_fin</td>
+      <td>Action</td>
+    </tr>
+    {% for item in data %}
+    <tr>
+      <td>{{item.fullName}}</td>
+      <td>{{item.nb_adultes}}</td>
+      <td>{{item.nb_enfants}}</td>
+      <td>{{item.date_debut| date("m/d/Y")}}</td>
+      <td>{{item.date_fin| date("m/d/Y")}} </td>
+      <td>
+        <a href="/reservation/modifier/{{item._id}}">Modifier</a>
+        <a href="/reservation/delete/{{item._id}}">Supprimer</a>
+      </td>
+    </tr>
+
+    {% endfor %}
+    <tr>
+      <td><a href="../reservation/add/">Add reservation</a></td>
+    </tr>
+  </table>
+
+</body>
+
+</html>

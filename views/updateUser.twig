@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Update User</title>
+</head>
+<body>
+<table>
+<form action="/users/updates" method="post">
+<tr><td>Name :</td><td><input type="text" name="name" id="name" value="{{data.name}}"/></td></tr>
+<tr><td>Email :</td><td><input type="text" name="email" id="email" value="{{data.email}}"/></td></tr>
+<tr><td></td><td><input type="hidden" name="id" id="id"  value="{{data._id}}"/></td></tr>
+
+<tr><td colspan="2"><input type="submit" value="Modifier" /></td>
+</form>
+</table>
+</body>
+</html>
